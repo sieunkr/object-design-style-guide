@@ -1,0 +1,8 @@
+final class JsonEncoder
+{
+
+    public function encode(array data): string
+    {
+        //로직
+    }
+}

@@ -1,0 +1,16 @@
+final class ResponseFactory
+{
+
+    private JsonEncoder jsonEncoder;
+
+    public function __construct(JsonEncoder jsonEncoder) {
+        this.jsonEncoder = jsonEncoder;
+    }
+    // 명시적 의존성으로 주입
+
+    /*
+        Json 인코딩 작업을 ResponseFactory 의 진정한 객체 의존성으로 승격하면,
+        이 클래스 사용자는 생성자 인자 목록을 간단히 살펴보는 것만으로 하는 일을 머릿속에 쉽게 그릴 수 있다.
+        또한 객체 의존성 도입은 서비스의 코드를 건드리지 않고 행위를 재설정하는 첫 번째 단계이다.
+    */
+}
