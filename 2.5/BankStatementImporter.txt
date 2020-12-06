@@ -1,0 +1,22 @@
+final class BankStatementImporter
+{
+
+    private Logger? logger;
+
+    public function __construct() {
+    }
+
+    public function setLogger(Logger logger): void {
+        this.logger = logger;
+    }
+
+    /*
+
+        setter 주입은 코드가 복잡해진다.
+
+        객체를 불안전한 상태로 생성할 수 없어야 한다.
+        서비스는 불변이어야 한다. 즉, 인스턴스 생성을 마친 후에는 바꿀 수 없어야 한다.
+
+        즉, 생성자 주입만 사용하자.
+    */
+}
