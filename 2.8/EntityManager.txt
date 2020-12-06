@@ -1,0 +1,30 @@
+
+//AS-IS
+final class EntityManager
+{
+
+    private object entity;
+
+    public function __construct(Object entity) {
+        this.entity = entity;
+    }
+
+    public function save(): void {
+        //...
+    }
+}
+
+유용하지 않음. 해야하는 모든 작업에 대해서 다시 인스턴스를 만들어야 함
+작업 세부 내용의 일부를 생성자 인자로 주입하는 것은 서비스를 재사용하는 데 방해가 된다.
+서비스를 다른 작업에도 재사용할 수 있게 이 모든 정보는 메서드 인자로 전달하는게 좋다.
+
+"이 서비스를 반복해서 인스턴스화 하지 않고도 일괄적으로 실행할 수 있을까?
+
+
+//TO-BE
+final class EntityManager {
+    public function save(object entity): void {
+        ...
+    }
+}
+
